@@ -1122,16 +1122,16 @@ class App(ctk.CTk):
         action_frame.grid(row=1, column=0, padx=20, pady=10, sticky="ew")
         action_frame.grid_columnconfigure((0, 1, 2, 3), weight=1)
 
-        self.btn_mysql_connect = ctk.CTkButton(action_frame, text="Kết nối", fg_color="#4F46E5", hover_color="#4338CA", corner_radius=6, command=self.test_mysql_connection)
+        self.btn_mysql_connect = ctk.CTkButton(action_frame, text="Kết nối", fg_color="#18181B", hover_color="#27272A", text_color="#FAFAFA", corner_radius=6, command=self.test_mysql_connection)
         self.btn_mysql_connect.grid(row=0, column=0, padx=10, pady=15)
         
-        self.btn_mysql_save = ctk.CTkButton(action_frame, text="Lưu Cấu Hình", fg_color="#475569", hover_color="#334155", corner_radius=6, command=self.save_mysql_config)
+        self.btn_mysql_save = ctk.CTkButton(action_frame, text="Lưu Cấu Hình", fg_color="#FAFAFA", hover_color="#F4F4F5", text_color="#18181B", border_width=1, border_color="#E4E4E7", corner_radius=6, command=self.save_mysql_config)
         self.btn_mysql_save.grid(row=0, column=1, padx=10, pady=15)
         
-        self.btn_mysql_download = ctk.CTkButton(action_frame, text="Tải về từ MySQL", fg_color="#059669", hover_color="#047857", corner_radius=6, command=self.download_from_mysql)
+        self.btn_mysql_download = ctk.CTkButton(action_frame, text="Tải về từ MySQL", fg_color="#18181B", hover_color="#27272A", text_color="#FAFAFA", corner_radius=6, command=self.download_from_mysql)
         self.btn_mysql_download.grid(row=0, column=2, padx=10, pady=15)
         
-        self.btn_mysql_delete = ctk.CTkButton(action_frame, text="Xóa đã tải", fg_color="#E11D48", hover_color="#BE123C", corner_radius=6, command=self.delete_downloaded_mysql)
+        self.btn_mysql_delete = ctk.CTkButton(action_frame, text="Xóa đã tải", fg_color="#FAFAFA", hover_color="#FEE2E2", text_color="#EF4444", border_width=1, border_color="#FECACA", corner_radius=6, command=self.delete_downloaded_mysql)
         self.btn_mysql_delete.grid(row=0, column=3, padx=10, pady=15)
         
         # Log Frame
