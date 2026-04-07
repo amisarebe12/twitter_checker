@@ -613,10 +613,10 @@ class App(ctk.CTk):
         self.at_btn_load_file = ctk.CTkButton(self.at_input_frame, text="Tải từ file", fg_color="#F3F4F6", text_color="#374151", hover_color="#E5E7EB", border_width=1, border_color="#D1D5DB", command=self.at_load_from_file, corner_radius=6)
         self.at_btn_load_file.grid(row=1, column=1, padx=(5, 15), pady=10)
         
-        self.at_btn_add = ctk.CTkButton(self.at_input_frame, text="Thêm vào danh sách", fg_color="#4F46E5", hover_color="#4338CA", command=self.at_add_accounts, corner_radius=6)
+        self.at_btn_add = ctk.CTkButton(self.at_input_frame, text="Thêm vào danh sách", fg_color="#18181B", hover_color="#27272A", text_color="#FAFAFA", command=self.at_add_accounts, corner_radius=6)
         self.at_btn_add.grid(row=2, column=0, padx=(15, 5), pady=(0, 15), sticky="ew")
         
-        self.at_btn_add_sorted = ctk.CTkButton(self.at_input_frame, text="Thêm Data Đã Có Ngày", fg_color="#F59E0B", hover_color="#D97706", text_color="#FFFFFF", command=self.at_add_already_sorted_accounts, corner_radius=6)
+        self.at_btn_add_sorted = ctk.CTkButton(self.at_input_frame, text="Thêm Data Đã Có Ngày", fg_color="#FAFAFA", hover_color="#F4F4F5", text_color="#18181B", border_width=1, border_color="#E4E4E7", command=self.at_add_already_sorted_accounts, corner_radius=6)
         self.at_btn_add_sorted.grid(row=2, column=1, padx=(5, 15), pady=(0, 15), sticky="ew")
         
         # Controls Frame
@@ -628,13 +628,13 @@ class App(ctk.CTk):
         self.at_entry_threads.pack(side="left", padx=5, pady=10)
         self.at_entry_threads.insert(0, "5")
         
-        self.at_btn_start = ctk.CTkButton(self.at_control_frame, text="Bắt đầu", fg_color="#059669", hover_color="#047857", corner_radius=6, command=self.at_start_checking)
+        self.at_btn_start = ctk.CTkButton(self.at_control_frame, text="Bắt đầu", fg_color="#18181B", hover_color="#27272A", text_color="#FAFAFA", corner_radius=6, command=self.at_start_checking)
         self.at_btn_start.pack(side="left", padx=(20, 10), pady=10)
         
-        self.at_btn_stop = ctk.CTkButton(self.at_control_frame, text="Dừng", fg_color="#E11D48", hover_color="#BE123C", state="disabled", corner_radius=6, command=self.at_stop_checking)
+        self.at_btn_stop = ctk.CTkButton(self.at_control_frame, text="Dừng", fg_color="#FAFAFA", hover_color="#FEE2E2", text_color="#EF4444", border_width=1, border_color="#FECACA", state="disabled", corner_radius=6, command=self.at_stop_checking)
         self.at_btn_stop.pack(side="left", padx=10, pady=10)
         
-        self.at_btn_clear = ctk.CTkButton(self.at_control_frame, text="Xóa danh sách", fg_color="#F3F4F6", text_color="#EF4444", hover_color="#FEE2E2", border_width=1, border_color="#FCA5A5", corner_radius=6, command=self.at_clear_list)
+        self.at_btn_clear = ctk.CTkButton(self.at_control_frame, text="Xóa danh sách", fg_color="#FAFAFA", text_color="#71717A", hover_color="#F4F4F5", border_width=1, border_color="#E4E4E7", corner_radius=6, command=self.at_clear_list)
         self.at_btn_clear.pack(side="right", padx=15, pady=10)
         
         # Stats Frame
@@ -680,10 +680,10 @@ class App(ctk.CTk):
         
         ctk.CTkLabel(self.at_header_success, text="Thành công", text_color="#10B981", font=("Arial", 13, "bold")).grid(row=0, column=0, sticky="w")
         
-        self.at_btn_sort_success = ctk.CTkButton(self.at_header_success, text="Sắp xếp", width=60, height=26, fg_color="transparent", text_color="#059669", border_width=1, border_color="#059669", hover_color="#ECFDF5", corner_radius=6, command=self.at_sort_success_results)
+        self.at_btn_sort_success = ctk.CTkButton(self.at_header_success, text="Sắp xếp", width=60, height=26, fg_color="#FAFAFA", text_color="#18181B", border_width=1, border_color="#E4E4E7", hover_color="#F4F4F5", corner_radius=6, command=self.at_sort_success_results)
         self.at_btn_sort_success.grid(row=0, column=1, sticky="e", padx=(0, 10))
         
-        self.at_btn_copy_success = ctk.CTkButton(self.at_header_success, text="Copy Tất Cả", width=80, height=26, fg_color="transparent", text_color="#059669", border_width=1, border_color="#059669", hover_color="#ECFDF5", corner_radius=6, command=lambda: self.copy_to_clipboard(self.at_txt_success))
+        self.at_btn_copy_success = ctk.CTkButton(self.at_header_success, text="Copy Tất Cả", width=80, height=26, fg_color="#FAFAFA", text_color="#18181B", border_width=1, border_color="#E4E4E7", hover_color="#F4F4F5", corner_radius=6, command=lambda: self.copy_to_clipboard(self.at_txt_success))
         self.at_btn_copy_success.grid(row=0, column=2, sticky="e")
         
         self.at_txt_success = ctk.CTkTextbox(self.at_frame_success, state="disabled", border_width=1, corner_radius=6, border_color="#D1FAE5", fg_color="#F9FAFB", text_color="#374151")
@@ -700,7 +700,7 @@ class App(ctk.CTk):
         self.at_header_failed.grid_columnconfigure(0, weight=1)
         
         ctk.CTkLabel(self.at_header_failed, text="Thất bại", text_color="#EF4444", font=("Arial", 13, "bold")).grid(row=0, column=0, sticky="w")
-        self.at_btn_copy_failed = ctk.CTkButton(self.at_header_failed, text="Copy Tất Cả", width=80, height=26, fg_color="transparent", text_color="#E11D48", border_width=1, border_color="#E11D48", hover_color="#FEF2F2", corner_radius=6, command=lambda: self.copy_to_clipboard(self.at_txt_failed))
+        self.at_btn_copy_failed = ctk.CTkButton(self.at_header_failed, text="Copy Tất Cả", width=80, height=26, fg_color="#FAFAFA", text_color="#18181B", border_width=1, border_color="#E4E4E7", hover_color="#F4F4F5", corner_radius=6, command=lambda: self.copy_to_clipboard(self.at_txt_failed))
         self.at_btn_copy_failed.grid(row=0, column=1, sticky="e")
         
         self.at_txt_failed = ctk.CTkTextbox(self.at_frame_failed, state="disabled", border_width=1, corner_radius=6, border_color="#FEE2E2", fg_color="#F9FAFB", text_color="#374151")

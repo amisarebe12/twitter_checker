@@ -1,7 +1,7 @@
 [Setup]
 ; Tên và phiên bản ứng dụng
 AppName=Twitter Checker IMAP
-AppVersion=1.3.0
+AppVersion=1.3.1
 AppPublisher=Your Name/Company
 AppCopyright=Copyright (C) 2024
 
@@ -12,7 +12,7 @@ AllowNoIcons=yes
 
 ; Cấu hình file Setup đầu ra
 OutputDir=Output
-OutputBaseFilename=TwitterChecker_v1.3.0
+OutputBaseFilename=TwitterChecker_v1.3.1
 SetupIconFile=X.ico
 
 ; Nén dữ liệu để dung lượng setup nhỏ nhất
