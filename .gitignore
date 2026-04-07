@@ -1,0 +1,24 @@
+# Python rác
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyInstaller và Inno Setup build
+build/
+dist/
+Output/
+*.spec
+
+# Môi trường ảo (nếu có)
+venv/
+env/
+.env
+
+# File cấu hình nội bộ IDE
+.vscode/
+.idea/
+
+# Database / Cấu hình cá nhân
+config.json
+*.db
+*.sqlite3
